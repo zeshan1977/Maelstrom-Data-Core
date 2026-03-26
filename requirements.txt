@@ -1,1 +1,1 @@
-fastapi\nuvicorn[standard]\npandas\nrequests\nasyncpg\nsQLAlchemy
+fastapi\nuvicorn[standard]\npandas\nrequests\npsycopg2-binary\nsQLAlchemy
