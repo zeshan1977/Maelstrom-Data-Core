@@ -1,0 +1,29 @@
+iLet's actually use the pipeline. We are going to make an HTTP request to your API, which will force your Python code to reach out to the public weather API, transform the data with Pandas, and write it into the database.
+
+1. Trigger the ETL Pipeline
+Run this curl command in your terminal:
+
+bash
+curl -X POST http://localhost:8000/api/v1/trigger-etl
+You should get a JSON response back that looks something like this:
+{"status":"success","rows_inserted":1,"latest_temp":14.5}
+
+(Feel free to run it 3 or 4 times so we have some data in the database!)
+
+2. View your Telemetry Data
+Now let's query your API to pull that saved data directly out of PostgreSQL. You can either run this in the terminal:
+
+bash
+curl http://localhost:8000/api/v1/telemetry
+OR (even better), open a web browser on your Windows machine and go to:
+👉 http://localhost:8000/api/v1/telemetry
+
+3. The "Wicked" Bonus: The Auto-Generated Dashboard
+Because we uswwwwww`wed FastAPI instead of Flask, you automatically get a gorgeous, interactive Swagger UI documentation page for free.
+
+Open your Windows browser and go to:
+👉 http://localhost:8000/docs
+
+From there, you can actually click "Try it out" and trigger your ETL pipeline right from the browser without using the terminal.
+
+

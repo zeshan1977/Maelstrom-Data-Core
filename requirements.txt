@@ -1,1 +1,6 @@
-fastapi\nuvicorn[standard]\npandas\nrequests\npsycopg2-binary\nsQLAlchemy
+fastapi
+uvicorn[standard]
+pandas
+requests
+psycopg2-binary
+SQLAlchemy
